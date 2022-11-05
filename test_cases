@@ -1,0 +1,330 @@
+[
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "ABC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AB",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "BC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AF",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "IA",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AI",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AHC",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "ABCDEFGHI",
+            "width": 3
+        },
+        "word": "AHF",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "AXBYC",
+            "width": 5
+        },
+        "word": "AC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "AXBYCZ",
+            "width": 6
+        },
+        "word": "AC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "AXBYCZ",
+            "width": 6
+        },
+        "word": "ABC",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ASGYMZNBTHUIAOCPDVJBKCQEWFXLDR",
+            "width": 5
+        },
+        "word": "ABCDABCDA",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "ASGYMZNBTHUIAOCPDVJBKCQEWFXLDR",
+            "width": 5
+        },
+        "word": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCD",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ASGYMZNBTHUIAOCPDVJBKCQEWFXLDR",
+            "width": 5
+        },
+        "word": "ABCDABCD",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAZ",
+            "width": 9
+        },
+        "word": "XAYAZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAZ",
+            "width": 9
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAZA",
+            "width": 10
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAA",
+            "width": 9
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAA",
+            "width": 10
+        },
+        "word": "XYZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAA",
+            "width": 10
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "width": 10
+        },
+        "word": "XYZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "width": 15
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "width": 15
+        },
+        "word": "XYZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAA",
+            "width": 11
+        },
+        "word": "XYZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAA",
+            "width": 11
+        },
+        "word": "XZY",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "YO",
+            "width": 2
+        },
+        "word": "YOYO",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "EK",
+            "width": 2
+        },
+        "word": "EKE",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "EK",
+            "width": 2
+        },
+        "word": "EEK",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "Z",
+            "width": 1
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "Z",
+            "width": 1
+        },
+        "word": "ZZZZZZZZZZZZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZA",
+            "width": 2
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZA",
+            "width": 1
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZAAA",
+            "width": 2
+        },
+        "word": "ZZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAA",
+            "width": 3
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAA",
+            "width": 2
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZAAA",
+            "width": 1
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAAAA",
+            "width": 2
+        },
+        "word": "ZZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAAAAA",
+            "width": 3
+        },
+        "word": "ZZ",
+        "expected": "false"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAAAAZ",
+            "width": 3
+        },
+        "word": "ZZ",
+        "expected": "true"
+    },
+    {
+        "grid": {
+            "content": "ZAAAAAAAAAZAAAAA",
+            "width": 4
+        },
+        "word": "ZZ",
+        "expected": "false"
+    }
+]
