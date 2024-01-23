@@ -10,7 +10,7 @@ struct Grid<'a> {
 }
 
 impl<'a> Grid<'a> {
-    fn new(content: &str, width: usize) -> Option<Self> {
+    fn new(content: &'a String, width: usize) -> Option<Self> {
         if content.len() > 0 && content.len() % width == 0 {
             Some(Self {
                 content,
@@ -21,15 +21,15 @@ impl<'a> Grid<'a> {
         }
     }
 
-    fn rows(&self) -> Vec<&str> {
-
+    fn rows(&self, place_to_put_rows: &String) -> Vec<&[char]> {
+        self.clone().content.chars().collect::<Vec<char>>().chunks(self.width).collect::<Vec<&[char]>>().cloned()
     }
 
-    fn tile_right(&self, n: usize) -> Option<Self> {
-        Self::new(&self.rows().iter().map(|r| r.repeat(n)).collect::<Vec<String>>().join(""), self.width * n)
+    fn tile_right(&self, n: usize, place_to_put_new_content: &String) -> Option<Self> {
+        Self::new(&self.rows().iter().map(|r| r.repeat(n)).flatten().map(|c| c.to_string()).collect::<Vec<String>>().join(""), self.width * n)
     }
 
-    fn tile_down(&self, n: usize) -> Option<Self> {
+    fn tile_down(&self, n: usize, place_to_put_new_content: &String) -> Option<Self> {
         Self::new(&self.content.repeat(n), self.width)
     }
 }
@@ -42,7 +42,7 @@ struct Wordsearch<'a> {
 }
 
 impl<'a> Wordsearch<'a> {
-    fn new(grid: Grid, word: &str, expected: bool) -> Option<Self> {
+    fn new(grid: Grid<'a>, word: &'a str, expected: bool) -> Option<Self> {
         if word.len() >= 2 {
             Some(Self {
                 grid,
@@ -91,7 +91,7 @@ fn main() {
         println!("        \"{}\"", result);
         println!("    ],");
 
-        if (result && expected != "true") || (!result && expected != "false") {
+        if result != expected {
             println!("*******************************************************");
             println!("Expected {} but got {}", expected, result);
             println!("*******************************************************");
